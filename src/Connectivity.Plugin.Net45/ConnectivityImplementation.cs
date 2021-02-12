@@ -89,7 +89,8 @@ namespace Plugin.Connectivity
                 case NetworkInterfaceType.GigabitEthernet:
                 case NetworkInterfaceType.FastEthernetFx:
                 case NetworkInterfaceType.GenericModem:
-                    return ConnectionType.Desktop;
+				case default(NetworkInterfaceType): //fake its the best for now
+					return ConnectionType.Desktop;
 
                 case NetworkInterfaceType.Ppp:
                 case NetworkInterfaceType.Fddi:
